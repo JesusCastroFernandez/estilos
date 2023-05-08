@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Nadador {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // Solicitamos la cantidad de largos recorridos y la longitud de la piscina
+        System.out.print("Ingrese la cantidad de largos recorridos: ");
+        int largos = input.nextInt();
+        System.out.print("Ingrese la longitud de la piscina en metros: ");
+        double longitud = input.nextDouble();
+        
+        // Calculamos los metros recorridos en cada estilo
+        double metrosCrol = largos * longitud;
+        double metrosEspalda = (largos - 1) * longitud;
+        
+        // Calculamos la longitud total recorrida en kilómetros
+        double longitudTotal = (metrosCrol + metrosEspalda) / 1000;
+        
+        // Mostramos los resultados
+        System.out.println("Metros recorridos a crol: " + metrosCrol);
+        System.out.println("Metros recorridos a espalda: " + metrosEspalda);
+        System.out.println("Longitud total recorrida en kilómetros: " + longitudTotal);
+    }
+}
